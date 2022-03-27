@@ -20,3 +20,5 @@ $myTruck->setCurrentStorage (12);
 var_dump($myTruck);
 echo "<br>";
 echo $myTruck->fillingRate();
+echo $myTruck->forward();
+echo $myTruck->brake();
