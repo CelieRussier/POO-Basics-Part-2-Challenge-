@@ -1,25 +1,13 @@
 <?php
-require 'car.php';
-require 'bicycle.php';
+require_once 'Vehicle.php';
+require_once 'bicycle.php';
+require_once 'car.php';
 
-$tornado = new Bicycle('black');
-$rockrider = new Bicycle('yellow');
-echo "Tornado is " . $tornado->getColor();
-echo "<br>";
-echo "Rockrider is " . $rockrider->getColor();
-echo "<br>";
 
-echo "<br>";
+$bicycle = new Bicycle('blue', 1);
+echo $bicycle->forward();
+var_dump($bicycle);
 
-$bartCar = new Car('yellow', 4, 'diesel');
-$bartCar->start();
-$bartCar->forward();
-echo "Bart's car is driving at " . $bartCar->getCurrentSpeed() . " km/h";
-echo "<br>";
-echo "Bart's car level of " . $bartCar->getEnergy() . " is at " . $bartCar->getEnergyLevel() . "/10";
-$bartCar->forward();
-echo "Bart's car is driving at " . $bartCar->getCurrentSpeed() . " km/h";
-echo "<br>";
-echo $bartCar->brake();
-echo "<br>";
-echo $bartCar->getCurrentSpeed();
+$car = new Car('green', 4, 'electric');
+echo $car->forward();
+var_dump($car);
