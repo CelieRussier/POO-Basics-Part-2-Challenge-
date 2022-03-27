@@ -9,13 +9,23 @@ class Car {
 
     public function __construct(private string $color, private int $nbSeats, private string $energy) {}
 
-    public function forward () {
-        $this->currentSpeed += 15;
-        return "The car is accelerating and reaching now " . $this->currentSpeed . "km/h";
+    public function forward () 
+    {
+        {
+            $this->currentSpeed = 15;
+            return "Go !";
+        }
     }
-    public function brake () {
-        while ($this->currentSpeed > 0) { $this->currentSpeed-=5;}
-        return "The car is braking and reducing speed to " . $this->currentSpeed . "km/h";
+    
+    public function brake () 
+    {
+        $sentence = "";
+        while ($this->currentSpeed > 0) {
+            $this->currentSpeed--;
+            $sentence .= "Brake !!!";
+        }
+        $sentence .= "<br>I'm stopped !";
+        return $sentence;
     }
 
     public function start() {
