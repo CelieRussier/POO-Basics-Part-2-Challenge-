@@ -1,11 +1,11 @@
 <?php
 require_once 'Vehicle.php';
-require_once 'bicycle.php';
+require_once 'bike.php';
 require_once 'car.php';
 require_once 'truck.php';
 
 
-$bicycle = new Bicycle('blue', 1);
+$bicycle = new Bike('blue', 1);
 echo $bicycle->forward();
 var_dump($bicycle);
 
@@ -22,3 +22,7 @@ echo "<br>";
 echo $myTruck->fillingRate();
 echo $myTruck->forward();
 echo $myTruck->brake();
+
+$tesla = new Car('black', 4, 'electric');
+$ferrari = new Car('red', 2, 'fuel');
+$schoolBus = new Bus('yellow', 40);
